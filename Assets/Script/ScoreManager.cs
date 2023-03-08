@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
 
     private int score = 0;
 
-    private void Start()
+    private void Awake()
     {
         if (instance != null && instance != this)
         {
