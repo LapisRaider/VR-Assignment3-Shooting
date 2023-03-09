@@ -5,17 +5,22 @@ using UnityEngine;
 public class CatController : MonoBehaviour
 {
     private ParticleSystem ps;
-
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         ps = GetComponent<ParticleSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        ScoreManager.instance.IncrementScore(1);
-        ps.Play();
-        FoodManager.instance.SpawnFood();
+        if (other.CompareTag("Food") && !animator.GetBool("isSleeping"))
+        {
+            ScoreManager.instance.IncrementScore(1);
+            ps.Play();
+            FoodManager.instance.SpawnFood();
+            animator.SetBool("isWalking", false);
+        }
     }
 }

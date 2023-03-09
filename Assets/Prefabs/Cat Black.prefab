@@ -211,26 +211,17 @@ MonoBehaviour:
   idleStates:
   - stateName: Sleeping
     animationBool: isSleeping
-    minStateTime: 20
-    maxStateTime: 40
+    minStateTime: 5
+    maxStateTime: 10
     stateWeight: 3
   movementStates:
   - stateName: Walking
     animationBool: isWalking
-    maxStateTime: 20
+    maxStateTime: 100
     moveSpeed: 2
     turnSpeed: 120
-  - stateName: Running
-    animationBool: isRunning
-    maxStateTime: 5
-    moveSpeed: 10
-    turnSpeed: 200
-  attackingStates:
-  - stateName: Attack
-    animationBool: isAttacking
-  deathStates:
-  - stateName: Dead
-    animationBool: isDead
+  attackingStates: []
+  deathStates: []
   species: Cat
   stats: {fileID: 11400000, guid: dbe9e93337452e549825f00a2450fc95, type: 2}
   wanderZone: 5

@@ -28,7 +28,8 @@ public class FoodManager : MonoBehaviour
         {
             foreach (GameObject spawnPoint in spawnPoints)
             {
-                Instantiate(food, spawnPoint.transform.position + new Vector3(0, i, 0), Quaternion.identity);
+
+                Instantiate(food, spawnPoint.transform.position + new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)), Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0, 1, 0)));
             }
         }
     }
@@ -36,6 +37,6 @@ public class FoodManager : MonoBehaviour
     public void SpawnFood()
     {
         GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(food, spawnPoint.transform.position, Quaternion.identity);
+        Instantiate(food, spawnPoint.transform.position, Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0, 1, 0)));
     }
 }
