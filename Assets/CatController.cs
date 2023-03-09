@@ -20,7 +20,7 @@ public class CatController : MonoBehaviour
             ScoreManager.instance.IncrementScore(1);
             ps.Play();
             FoodManager.instance.SpawnFood();
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isSleeping", true);
         }
     }
 }
