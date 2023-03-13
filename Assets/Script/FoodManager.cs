@@ -28,8 +28,10 @@ public class FoodManager : MonoBehaviour
         {
             foreach (GameObject spawnPoint in spawnPoints)
             {
-
-                Instantiate(food, spawnPoint.transform.position + new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)), Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0, 1, 0)));
+                Instantiate(food, 
+                    spawnPoint.transform.position + new Vector3(Random.Range(-0.1f, 0.1f), i, Random.Range(-0.1f, 0.1f)), 
+                    Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0, 1, 0))
+                );
             }
         }
     }
