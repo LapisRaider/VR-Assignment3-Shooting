@@ -338,7 +338,7 @@ MonoBehaviour:
   grabButton: RHandTriggerGrab
   shootButton: RHandTrigger
   Controller: 2
-  grabRadius: 1
+  grabRadius: 2
   grabMask:
     serializedVersion: 2
     m_Bits: 8
@@ -1724,6 +1724,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1137099980}
     m_Modifications:
+    - target: {fileID: 8101796557367020197, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.003526638
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101796557367020197, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.038709432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101921147742068755, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.020017818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101921147742068755, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.020416357
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102029404318827455, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.003526638
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102029404318827455, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.038709432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102168482126686695, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.020017818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102168482126686695, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.020416357
+      objectReference: {fileID: 0}
     - target: {fileID: 8102449358733180659, guid: ca08dbd42079b4516acabc3b747b925d,
         type: 3}
       propertyPath: m_RootOrder
@@ -2855,6 +2895,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat Black (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8106134982496225101, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106134982496225101, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca08dbd42079b4516acabc3b747b925d, type: 3}
 --- !u!1 &1305184428
@@ -3725,6 +3775,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat Black (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8155247464510234095, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178796710820181097, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208662477030072071, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca08dbd42079b4516acabc3b747b925d, type: 3}
 --- !u!1 &1800592193
@@ -4567,6 +4632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cat Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104233127452764229, guid: ca08dbd42079b4516acabc3b747b925d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca08dbd42079b4516acabc3b747b925d, type: 3}
