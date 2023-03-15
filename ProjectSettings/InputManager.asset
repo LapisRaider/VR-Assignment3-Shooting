@@ -499,7 +499,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 11
+    axis: 9
     joyNum: 0
   - serializedVersion: 3
     m_Name: LHandTrigger
@@ -515,6 +515,22 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 10
+    axis: 8
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: RHandTriggerGrab
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1.5
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 11
     joyNum: 0
   m_UsePhysicalKeys: 0

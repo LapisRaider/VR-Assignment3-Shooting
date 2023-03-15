@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Grab : MonoBehaviour
 {
-    public string buttonName;
+    public string grabButton;
+    public string shootButton;
     public OVRInput.Controller Controller;
     public float grabRadius;
     public LayerMask grabMask;
@@ -21,11 +22,11 @@ public class Grab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!grabbing && Input.GetAxis(buttonName) == 1) {
+        if (!grabbing && Input.GetAxis(grabButton) == 1) {
             GrabObject();
         }
-        if (grabbing && Input.GetAxis(buttonName) < 1) {
-            DropObject();
+        if (grabbing && Input.GetAxis(shootButton) == 1) {
+            ShootObject();
         }
     }
 
@@ -56,7 +57,7 @@ public class Grab : MonoBehaviour
         }
     }
 
-    void DropObject()
+    void ShootObject()
     {
         grabbing = false;
 
@@ -64,10 +65,8 @@ public class Grab : MonoBehaviour
         {
             grabbedObject.transform.parent = null;
             grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
-            grabbedObject.GetComponent<Rigidbody>().velocity = OVRInput.GetLocalControllerVelocity(Controller);
-            grabbedObject.GetComponent<Rigidbody>().angularVelocity = OVRInput.GetLocalControllerAngularVelocity(Controller);
+            grabbedObject.GetComponent<Rigidbody>().AddForce(transform.forward*5);
             grabbedObject = null;
         }
     }
-
 };

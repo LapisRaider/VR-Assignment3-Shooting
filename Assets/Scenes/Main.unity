@@ -335,7 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e100243df382b4da54e9c6f850ea28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: RHandTrigger
+  grabButton: RHandTriggerGrab
+  shootButton: RHandTrigger
   Controller: 2
   grabRadius: 1
   grabMask:
