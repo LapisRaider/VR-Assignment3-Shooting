@@ -10,7 +10,7 @@ public class TargetController : MonoBehaviour
         {
             ScoreManager.instance.IncrementScore(1);
             Instantiate(explodeEffects, transform.position, transform.rotation);
-            Destroy(other.gameObject);    
+            Destroy(other.gameObject);
             Destroy(gameObject);  
         }
 

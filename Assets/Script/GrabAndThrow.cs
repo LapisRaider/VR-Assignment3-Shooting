@@ -8,17 +8,13 @@ public class GrabAndThrow : MonoBehaviour
     public OVRInput.Controller Controller;
     public float grabRadius;
     public LayerMask grabMask;
-
+    public AudioSource audioSource;
+    public AudioClip grabAudio;
+    public AudioClip shootAudio;
 
     private GameObject grabbedObject;
     private bool grabbing;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (!grabbing && Input.GetAxis(buttonName) == 1) {
@@ -53,6 +49,7 @@ public class GrabAndThrow : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
             grabbedObject.transform.position = transform.position;
             grabbedObject.transform.parent = transform;
+            audioSource.PlayOneShot(grabAudio);
         }
     }
 
@@ -67,6 +64,7 @@ public class GrabAndThrow : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody>().velocity = OVRInput.GetLocalControllerVelocity(Controller)*3;
             grabbedObject.GetComponent<Rigidbody>().angularVelocity = OVRInput.GetLocalControllerAngularVelocity(Controller);
             grabbedObject = null;
+            audioSource.PlayOneShot(shootAudio);
         }
     }
 

@@ -1,15 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI timeText;
-    [SerializeField] private int time;
 
     private int score = 0;
+    private float timeStarted;
 
     private void Awake()
     {
@@ -21,25 +18,29 @@ public class ScoreManager : MonoBehaviour
         {
             instance = this;
         }
-        StartCoroutine(CountDown());
-    }
 
-    private IEnumerator CountDown()
-    {
-        while (time >= 0)
-        {
-            timeText.text = "Time Left: " + time;
-            time--;
-            yield return new WaitForSeconds(1);
-        }
+        timeStarted = Time.time;
     }
 
     public void IncrementScore(int val)
     {
-        if (time > 0)
-        {
-            score += val;
-            scoreText.text = "Score: " + score;
-        }
+        score += val;
+    }
+
+    public string GetScoreText()
+    {
+        return score + " cats fed";
+    }
+
+    public string GetTimeText()
+    {
+        return TimeToString(Time.time - timeStarted);
+    }
+
+    public string TimeToString(float timeInSeconds)
+    {
+        int minutes = Mathf.FloorToInt(timeInSeconds / 60f);
+        int seconds = Mathf.FloorToInt(timeInSeconds - minutes * 60);
+        return string.Format("{0:00} : <mspace=0.5em>{1:00}", minutes, seconds);
     }
 }
