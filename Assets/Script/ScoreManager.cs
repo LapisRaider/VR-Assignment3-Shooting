@@ -29,6 +29,11 @@ public class ScoreManager : MonoBehaviour
 
     public string GetScoreText()
     {
+        if (score >= 9)
+        {
+            return "All cats fed! <3";
+        }
+        
         return score + " cats fed";
     }
 

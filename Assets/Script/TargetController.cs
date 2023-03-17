@@ -9,6 +9,7 @@ public class TargetController : MonoBehaviour
         if (other.gameObject.CompareTag("Food")) 
         {
             ScoreManager.instance.IncrementScore(1);
+            FoodManager.instance.SpawnFood();
             Instantiate(explodeEffects, transform.position, transform.rotation);
             Destroy(other.gameObject);
             Destroy(gameObject);  

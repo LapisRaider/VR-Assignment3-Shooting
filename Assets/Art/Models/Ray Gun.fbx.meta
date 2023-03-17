@@ -3,7 +3,27 @@ guid: 6a11e6372ac7a4655b62e432d37900ad
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detail
+    second: {fileID: 2100000, guid: c690e750d70839542b90d5ba3f4df845, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main
+    second: {fileID: 2100000, guid: c640295911393d842b0aed6a872aaab9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main2
+    second: {fileID: 2100000, guid: 13bd51d5796f9dc42ac600a3ea7a5ce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muzzle
+    second: {fileID: 2100000, guid: 1b9816390c6d8b04697bea613fc54edc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

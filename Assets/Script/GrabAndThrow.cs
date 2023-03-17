@@ -17,10 +17,13 @@ public class GrabAndThrow : MonoBehaviour
 
     void Update()
     {
-        if (!grabbing && Input.GetAxis(buttonName) == 1) {
+        if (!grabbing && Input.GetAxis(buttonName) == 1)
+        {
             GrabObject();
         }
-        if (grabbing && Input.GetAxis(buttonName) < 1) {
+        
+        if (grabbing && Input.GetAxis(buttonName) < 1)
+        {
             ThrowObject();
         }
     }

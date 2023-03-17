@@ -21,10 +21,9 @@ public class FoodManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < initialSpawn; i++)
+        for (int i = 0; i <= initialSpawn; i++)
         {
             foreach (GameObject spawnPoint in spawnPoints)
             {

@@ -9,6 +9,7 @@ public class Grab : MonoBehaviour
     public OVRInput.Controller Controller;
     public float grabRadius;
     public LayerMask grabMask;
+    public float shootingForce = 10f;
     public AudioSource audioSource;
     public AudioClip grabAudio;
     public AudioClip shootAudio;
@@ -18,24 +19,27 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
-        if (!grabbing && Input.GetAxis(grabButton) == 1) {
+        if (!grabbing && Input.GetAxis(grabButton) == 1)
+        {
             GrabObject();
         }
-        if (grabbing && Input.GetAxis(shootButton) == 1) {
+
+        if (grabbing && Input.GetAxis(shootButton) == 1)
+        {
             ShootObject();
         }
     }
 
     void GrabObject()
     {
-        grabbing = true;
-
         RaycastHit[] hits;
 
         hits = Physics.SphereCastAll(transform.position, grabRadius,transform.forward,0f,grabMask);
         
         if (hits.Length > 0) 
         {
+            grabbing = true;
+
             int closestHit = 0;
 
             for(int i = 0; i<hits.Length; i++)
@@ -62,7 +66,7 @@ public class Grab : MonoBehaviour
         {
             grabbedObject.transform.parent = null;
             grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
-            grabbedObject.GetComponent<Rigidbody>().AddForce(transform.forward*20);
+            grabbedObject.GetComponent<Rigidbody>().AddForce(transform.forward * shootingForce);
             grabbedObject = null;
             audioSource.PlayOneShot(shootAudio);
         }
