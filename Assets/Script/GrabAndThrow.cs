@@ -10,7 +10,7 @@ public class GrabAndThrow : MonoBehaviour
     public LayerMask grabMask;
     public AudioSource audioSource;
     public AudioClip grabAudio;
-    public AudioClip shootAudio;
+    public AudioClip throwAudio;
 
     private GameObject grabbedObject;
     private bool grabbing;
@@ -64,7 +64,7 @@ public class GrabAndThrow : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody>().velocity = OVRInput.GetLocalControllerVelocity(Controller)*3;
             grabbedObject.GetComponent<Rigidbody>().angularVelocity = OVRInput.GetLocalControllerAngularVelocity(Controller);
             grabbedObject = null;
-            audioSource.PlayOneShot(shootAudio);
+            audioSource.PlayOneShot(throwAudio);
         }
     }
 
